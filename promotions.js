@@ -1,3 +1,6 @@
+/* Module to handle promotions
+*  Supports GET, POST, PUT and DELETE methods
+*/ 
 var express = require('express');
 var bodyParser = require('body-parser');
 
@@ -23,7 +26,7 @@ promoRouter.route('/')
 
 	res.end('Deleting all promos');
 });
-
+// Handle requests to certain ids
 promoRouter.route('/:promoId')
 .all(function(req,res,next) {
 

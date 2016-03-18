@@ -1,3 +1,6 @@
+/* Module to handle dishes
+*  Supports GET, POST, PUT and DELETE methods
+*/ 
 var express = require('express');
 var bodyParser = require('body-parser');
 
@@ -23,7 +26,7 @@ dishRouter.route('/')
 
 	res.end('Deleting all dishes');
 });
-
+// Handle requests to certain ids
 dishRouter.route('/:dishId')
 .all(function(req,res,next) {
 
